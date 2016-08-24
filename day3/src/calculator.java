@@ -16,37 +16,38 @@ import java.io.InputStreamReader;
  * int secondOperand = 12;
  */
 public class calculator {
-        public static int umnog ( int a, int b) {
-            int d = a * b;
-            return d;
+        public static int multiply ( int firstOperand, int secondOperand) {
+            int otvet = firstOperand * secondOperand;
+            return otvet;
         }
-        public static int del ( int a, int b){
-            int d = a / b;
-            return d;
+        public static int share ( int firstOperand, int secondOperand){
+            int otvet = firstOperand / secondOperand;
+            return otvet;
         }
-        public static int summa ( int a, int b){
-            int d = a+b;
-            return d;
+        public static int add ( int firstOperand, int secondOperand){
+            int otvet = firstOperand + secondOperand;
+            return otvet;
         }
-        public static int minus ( int a, int b){
-            int d = a - b;
-            return d;
+        public static int deduct ( int firstOperand, int secondOperand){
+            int otvet = firstOperand - secondOperand;
+            return otvet;
         }
-        public static int ostat ( int a, int b) {
-            int d = a % b;
-            return d;
+        public static int ostatok ( int firstOperand, int secondOperand){
+            int otvet = firstOperand % secondOperand;
+            return otvet;
         }
-        public static int modul ( int a){
-            int d =0;
-            if (a < 0 ) d = a * -1;
-            else d = a;
-            return d;
+        public static int modul ( int firstOperand){
+            int otvet =0;
+            if (firstOperand < 0 )
+                otvet = firstOperand * -1;
+            else otvet = firstOperand;
+            return otvet;
             }
         public static void main(String[] args) throws Exception {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Введите первое число:");
-            String d1 = reader.readLine();
-            int n1 = Integer.parseInt(d1);
+            String firstOperandStroka = reader.readLine();
+            int firstOperand = Integer.parseInt(firstOperandStroka);
             System.out.println("Введите операцию("+
                     "- умножение;\n" +
                     "- деление;\n" +
@@ -58,36 +59,36 @@ public class calculator {
             switch (d3) {
             case "умножение":
                 System.out.println("Введите второе число:");
-                String d2 = reader.readLine();
-                int n2 = Integer.parseInt(d2);
-                System.out.println("Otvet " + umnog(n1,n2));
+                String secondOperandStroka = reader.readLine();
+                int secondOperand = Integer.parseInt(secondOperandStroka);
+                System.out.println("Otvet " + multiply(firstOperand,secondOperand));
                 break;
             case "деление":
                 System.out.println("Введите второе число:");
-                d2 = reader.readLine();
-                n2 = Integer.parseInt(d2);
-                System.out.println("Otvet " + del(n1,n2));
+                secondOperandStroka = reader.readLine();
+                secondOperand = Integer.parseInt(secondOperandStroka);
+                System.out.println("Otvet " + share(firstOperand,secondOperand));
                 break;
             case "сложение":
                 System.out.println("Введите второе число:");
-                d2 = reader.readLine();
-                n2 = Integer.parseInt(d2);
-                System.out.println("Otvet " + summa(n1,n2));
+                secondOperandStroka = reader.readLine();
+                secondOperand = Integer.parseInt(secondOperandStroka);
+                System.out.println("Otvet " + add(firstOperand,secondOperand));
                 break;
                 case "вычитание":
-                 System.out.println("Введите второе число:");
-                 d2 = reader.readLine();
-                 n2 = Integer.parseInt(d2);
-                 System.out.println("Otvet " + minus(n1,n2));
+                System.out.println("Введите второе число:");
+                secondOperandStroka = reader.readLine();
+                secondOperand = Integer.parseInt(secondOperandStroka);
+                System.out.println("Otvet " + deduct(firstOperand,secondOperand));
                 break;
                 case "остаток от деления":
                 System.out.println("Введите второе число:");
-                d2 = reader.readLine();
-                n2 = Integer.parseInt(d2);
-                System.out.println("Otvet " + ostat(n1,n2));
+                secondOperandStroka = reader.readLine();
+                secondOperand = Integer.parseInt(secondOperandStroka);
+                System.out.println("Otvet " + ostatok(firstOperand,secondOperand));
                 break;
                 case "модуль числа":
-                System.out.println("Otvet " + modul(n1));
+                System.out.println("Otvet " + modul(firstOperand));
                 break;
                 default:
                 System.out.println("Неправильное введение данных!");
