@@ -55,8 +55,8 @@ public class calculator {
                     "- вычитание;\n" +
                     "- остаток от деления;\n" +
                     "- модуль числа):");
-            String d3 = reader.readLine();
-            switch (d3) {
+            String operation = reader.readLine();
+            switch (operation) {
             case "умножение":
                 System.out.println("Введите второе число:");
                 String secondOperandStroka = reader.readLine();
